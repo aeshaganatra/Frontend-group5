@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Surveys Lists</h1>
+
+  <table class="table table-bordered">
+    <tr>
+      <th>No.</th>
+      <th>Full Name</th>
+      <th>Title</th>
+      <th>Created Date</th>
+      <th>Expiry Date</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let survey of surveys; let i=index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ survey.FirstName + ' ' +survey.LastName }}</td>
+      <td ><a href="#" [routerLink]="['/survey/respond-survey/', survey._id]" class="c-point">{{ survey.Title }}</a></td>
+      <td>{{ survey.CreatedDate }}</td>
+      <td>{{ survey.ExpiryDate }}</td>
+      <td >
+<!--        <a href="#" [routerLink]="['/survey/', survey.id, 'view']" class="btn btn-info">View</a>-->
+        <button *ngIf="isLoggedIn"  href="#" [routerLink]="['/survey/edit-survey/', survey._id]" class="btn btn-primary me-3">Edit</button>
+        <button  *ngIf="isLoggedIn" type="button" (click)="deleteSurvey(survey._id)" class="btn btn-danger me-3 ">Delete</button>
+        <button  type="button" [routerLink]="['/survey/survey-report/', survey._id]"  class="btn btn-success ">Check Survey response</button>
+      </td>
+    </tr>
+  </table>
+</div>

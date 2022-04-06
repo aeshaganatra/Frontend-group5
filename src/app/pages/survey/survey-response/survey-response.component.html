@@ -1,0 +1,42 @@
+<div class="container">
+  <h1>{{oneSurvey.Title}} - Survey Response</h1>
+  <h4>Created by - {{oneSurvey.FirstName + ' ' +oneSurvey.LastName}}</h4>
+  <h5>Total responses for this survey - {{survey.length}}</h5>
+
+  <table class="table table-bordered">
+    <tr>
+      <th>Questions</th>
+      <th>True</th>
+      <th>False</th>
+    </tr>
+<!--    *ngFor="let survey of surveyService.survey"-->
+    <tbody *ngFor="let q of oneSurvey.Questions; let i = index">
+    <tr >
+      <td>{{q.q1}}</td>
+      <td>{{t1.length}}</td>
+      <td>{{f1.length}}</td>
+    </tr>
+    <tr >
+      <td>{{q.q2}}</td>
+      <td>{{t2.length}}</td>
+      <td>{{f2.length}}</td>
+    </tr>
+    <tr >
+      <td>{{q.q3}}</td>
+      <td>{{t3.length}}</td>
+      <td>{{f3.length}}</td>
+    </tr>
+    <tr >
+      <td>{{q.q4}}</td>
+      <td>{{t4.length}}</td>
+      <td>{{f4.length}}</td>
+    </tr>
+    <tr >
+      <td>{{q.q5}}</td>
+      <td>{{t5.length}}</td>
+      <td>{{f5.length}}</td>
+    </tr>
+    </tbody>
+
+  </table>
+</div>

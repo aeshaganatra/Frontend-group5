@@ -1,0 +1,102 @@
+<div class="container d-block" style="padding-left: 25%; min-height: 0;">
+  <h5 class="mt-5 mb-3">{{survey.Title}}</h5>
+
+  <form [formGroup]="answerForm" (ngSubmit)="onSubmit()">
+  <div *ngFor="let que of survey.Questions">
+    <div>
+      <label>{{que.q1}}</label>
+      <br>
+      <input type="radio" value="true" name="answer1" formControlName="answer1" ngModel> True
+      <input type="radio" value="false" name="answer1" formControlName="answer1" ngModel> False
+    </div>
+
+    <br>
+    <div>
+      <label>{{que.q2}}</label>
+      <br>
+      <input type="radio" value="true" name="answer2" formControlName="answer2" ngModel> True
+      <input type="radio" value="false" name="answer2" formControlName="answer2" ngModel> False
+    </div>
+    <br>
+    <div>
+      <label>{{que.q3}}</label>
+      <br>
+      <input type="radio" value="true" name="answer3" formControlName="answer3" ngModel> True
+      <input type="radio" value="false" name="answer3" formControlName="answer3" ngModel> False
+    </div>
+    <br>
+    <div>
+      <label>{{que.q4}}</label>
+      <br>
+      <input type="radio" value="true" name="answer4" formControlName="answer4" ngModel> True
+      <input type="radio" value="false" name="answer4" formControlName="answer4" ngModel> False
+    </div>
+    <br>
+    <div>
+      <label>{{que.q5}}</label>
+      <br>
+      <input type="radio" value="true" name="answer5" formControlName="answer5" ngModel> True
+      <input type="radio" value="false" name="answer5" formControlName="answer5" ngModel> False
+    </div>
+  </div>
+
+<!--  <form [formGroup]="surveyForm" (ngSubmit)="submit()" class="row g-3">-->
+<!--    <div class="form-group">-->
+<!--      &lt;!&ndash;      <div class="col-md-8">&ndash;&gt;-->
+<!--      &lt;!&ndash;        <label for="id" class="form-label">Id</label>&ndash;&gt;-->
+<!--      &lt;!&ndash;        <input type="text" class="form-control" formControlName="id" id="id">&ndash;&gt;-->
+<!--      &lt;!&ndash;      </div>&ndash;&gt;-->
+<!--      <div class="col-md-8">-->
+<!--        <label for="fname" class="form-label">First Name</label>-->
+<!--        <input type="text" class="form-control" formControlName="fname" id="fname">-->
+<!--      </div>-->
+<!--      <div class="col-md-8">-->
+<!--        <label for="lname" class="form-label">Last Name</label>-->
+<!--        <input type="text" class="form-control" formControlName="lname" id="lname">-->
+<!--      </div>-->
+<!--      <div class="col-8">-->
+<!--        <label for="title" class="form-label">Title</label>-->
+<!--        <input type="text" class="form-control" formControlName="title" id="title">-->
+<!--      </div>-->
+<!--      <div class="col-md-8">-->
+<!--        <label for="createdDate" class="form-label">Created Date</label>-->
+<!--        <input type="date" class="form-control" formControlName="createdDate" id="createdDate">-->
+<!--      </div>-->
+<!--      <div class="col-md-8">-->
+<!--        <label for="expireDate" class="form-label">Expiry Date</label>-->
+<!--        <input type="date" class="form-control" formControlName="expireDate" id="expireDate">-->
+<!--      </div>-->
+<!--      <p class="pt-3">Add 5 true or false questions</p>-->
+
+<!--      <div class="col-md-8">-->
+<!--        <label for="q1" class="form-label">Q1</label>-->
+<!--        <input type="text" class="form-control" formControlName="q1" id="q1">-->
+<!--      </div>-->
+
+<!--      <div class="col-md-8">-->
+<!--        <label for="q2" class="form-label">Q2</label>-->
+<!--        <input type="text" class="form-control" formControlName="q2" id="q2">-->
+<!--      </div>-->
+
+<!--      <div class="col-md-8">-->
+<!--        <label for="q3" class="form-label">Q3</label>-->
+<!--        <input type="text" class="form-control" formControlName="q3" id="q3">-->
+<!--      </div>-->
+
+<!--      <div class="col-md-8">-->
+<!--        <label for="q4" class="form-label">Q4</label>-->
+<!--        <input type="text" class="form-control" formControlName="q4" id="q4">-->
+<!--      </div>-->
+
+<!--      <div class="col-md-8">-->
+<!--        <label for="q5" class="form-label">Q5</label>-->
+<!--        <input type="text" class="form-control" formControlName="q5" id="q5">-->
+<!--      </div>-->
+
+<!--    </div>-->
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+
+</div>
