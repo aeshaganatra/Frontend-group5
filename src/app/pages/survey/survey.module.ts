@@ -9,7 +9,7 @@ import { ListSurveyComponent } from './list-survey/list-survey.component';
 import {BrowserModule} from "@angular/platform-browser";
 import { SurveyResponseComponent } from './survey-response/survey-response.component';
 import { AddSurveyRespondComponent } from './survey-response/add-survey-respond/add-survey-respond.component';
-
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [AddSurveyComponent, EditSurveyComponent, ListSurveyComponent, SurveyResponseComponent, AddSurveyRespondComponent],
@@ -18,7 +18,8 @@ import { AddSurveyRespondComponent } from './survey-response/add-survey-respond/
     SurveyRoutingModule,
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ChartsModule
   ]
 
 })
