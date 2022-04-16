@@ -39,4 +39,19 @@
     </tbody>
 
   </table>
+
+
+  <canvas 
+  baseChart 
+  *ngIf="pieChartData.length"
+    [data]="pieChartData"
+    [labels]="pieChartLabels" 
+    [chartType]="pieChartType"
+    [options]="pieChartOptions"
+    [plugins]="pieChartPlugins"
+    [legend]="pieChartLegend">
+  </canvas>
+
 </div>
+
+
