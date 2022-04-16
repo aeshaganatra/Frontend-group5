@@ -2,6 +2,7 @@ export class Survey {
   _id?: string
   FirstName?: string;
   LastName?: string;
+  surveyType?: String;
   Title?: string;
   CreatedDate?: Date;
   ExpiryDate?: Date;

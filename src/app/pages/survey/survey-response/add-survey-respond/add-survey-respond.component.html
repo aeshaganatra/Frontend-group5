@@ -3,6 +3,8 @@
 
   <form [formGroup]="answerForm" (ngSubmit)="onSubmit()">
   <div *ngFor="let que of survey.Questions">
+
+    
     <div>
       <label>{{que.q1}}</label>
       <br>
