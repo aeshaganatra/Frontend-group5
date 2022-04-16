@@ -1,12 +1,16 @@
-<img class="fullBg" [src]="home.image">
+
 
 
 <div class="container">
 
   <h1>{{home.title}}</h1>
   <h2>{{home.subtitle}}</h2>
-  <p>{{home.subtitle}}</p>
-
+  <p>{{home.content}}</p>
+  <button type="button" [routerLink]="['/login']" class="btn btn-primary">Step 1:  Log in</button>
+  <button type="button" [routerLink]="['/survey/list-survey']"class="btn btn-primary">Step2:  Create a survey</button>
+  <button type="button" class="btn btn-primary">Step3:  Fill survey </button>
+  <button type="button" class="btn btn-primary">Step4:  View survey result</button>
+  <img class="fullBg" [src]="home.image">
   
 </div>
 

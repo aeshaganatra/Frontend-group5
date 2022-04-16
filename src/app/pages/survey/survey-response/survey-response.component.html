@@ -1,10 +1,11 @@
 <div class="container">
   <h1>{{oneSurvey.Title}} - Survey Response</h1>
-  <h4>Created by - {{oneSurvey.FirstName + ' ' +oneSurvey.LastName}}</h4>
-  <h5>Total responses for this survey - {{survey.length}}</h5>
+  <h6>Created by: {{oneSurvey.FirstName + ' ' +oneSurvey.LastName}}</h6>
+  <h4>Total responses for this survey: {{survey.length}}</h4>
 
   <table class="table table-bordered">
     <tr>
+      <th>index</th>
       <th>Questions</th>
       <th>True</th>
       <th>False</th>
@@ -12,26 +13,31 @@
 <!--    *ngFor="let survey of surveyService.survey"-->
     <tbody *ngFor="let q of oneSurvey.Questions; let i = index">
     <tr >
+      <td>Q1</td>
       <td>{{q.q1}}</td>
       <td>{{t1.length}}</td>
       <td>{{f1.length}}</td>
     </tr>
     <tr >
+      <td>Q2</td>
       <td>{{q.q2}}</td>
       <td>{{t2.length}}</td>
       <td>{{f2.length}}</td>
     </tr>
     <tr >
+      <td>Q3</td>
       <td>{{q.q3}}</td>
       <td>{{t3.length}}</td>
       <td>{{f3.length}}</td>
     </tr>
     <tr >
+      <td>Q4</td>
       <td>{{q.q4}}</td>
       <td>{{t4.length}}</td>
       <td>{{f4.length}}</td>
     </tr>
     <tr >
+      <td>Q5</td>
       <td>{{q.q5}}</td>
       <td>{{t5.length}}</td>
       <td>{{f5.length}}</td>
@@ -41,16 +47,78 @@
   </table>
 
 
-  <canvas 
-  baseChart 
-  *ngIf="pieChartData.length"
-    [data]="pieChartData"
-    [labels]="pieChartLabels" 
-    [chartType]="pieChartType"
-    [options]="pieChartOptions"
-    [plugins]="pieChartPlugins"
-    [legend]="pieChartLegend">
-  </canvas>
+  
+  <div class="chart-wrapper"> 
+    <h5>Q1</h5>
+    <canvas height="200"width="800"
+    baseChart 
+    *ngIf="pieChartData1.length"
+      [data]="pieChartData1"
+      [labels]="pieChartLabels" 
+      [chartType]="pieChartType"
+      [options]="pieChartOptions"
+      [plugins]="pieChartPlugins"
+      [legend]="pieChartLegend">
+    </canvas>
+  </div>
+
+  <div class="chart-wrapper"> 
+    <h5>Q2</h5>
+    <canvas height="200"width="800"
+    baseChart 
+    *ngIf="pieChartData2.length"
+      [data]="pieChartData2"
+      [labels]="pieChartLabels" 
+      [chartType]="pieChartType"
+      [options]="pieChartOptions"
+      [plugins]="pieChartPlugins"
+      [legend]="pieChartLegend">
+    </canvas>
+  </div>
+
+  <div class="chart-wrapper"> 
+    <h5>Q3</h5>
+    <canvas height="200"width="800"
+    baseChart 
+    *ngIf="pieChartData3.length"
+      [data]="pieChartData3"
+      [labels]="pieChartLabels" 
+      [chartType]="pieChartType"
+      [options]="pieChartOptions"
+      [plugins]="pieChartPlugins"
+      [legend]="pieChartLegend">
+    </canvas>
+  </div>
+
+  <div class="chart-wrapper"> 
+    <h5>Q4</h5>
+    <canvas height="200"width="800"
+    baseChart 
+    *ngIf="pieChartData4.length"
+      [data]="pieChartData4"
+      [labels]="pieChartLabels" 
+      [chartType]="pieChartType"
+      [options]="pieChartOptions"
+      [plugins]="pieChartPlugins"
+      [legend]="pieChartLegend">
+    </canvas>
+  </div>
+
+  <div class="chart-wrapper"> 
+    <h5>Q5</h5>
+    <canvas height="200"width="800"
+    baseChart 
+    *ngIf="pieChartData5.length"
+      [data]="pieChartData5"
+      [labels]="pieChartLabels" 
+      [chartType]="pieChartType"
+      [options]="pieChartOptions"
+      [plugins]="pieChartPlugins"
+      [legend]="pieChartLegend">
+    </canvas>
+  </div>
+
+
 
 </div>
 

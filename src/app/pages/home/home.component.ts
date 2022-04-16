@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   home = {
     title: 'Super Survey',
     subtitle: 'Ask Questions, Get Insights!',
-    content: 'SurveyMethods is a survey tool, with easy to use features free of charge.',
+    content: 'SuperSurvey is a survey tool, with easy to use features free of charge.',
     image: 'assets/home1.jpg'
   };
 
