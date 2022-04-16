@@ -18,7 +18,7 @@ export class AddSurveyComponent {
     fname: new FormControl('', [Validators.required]),
     lname: new FormControl('', Validators.required),
     title: new FormControl('', Validators.required),
-    type: new FormControl('', Validators.required),
+    surveytype: new FormControl('', Validators.required),
     description: new FormControl('', Validators.required),
     createdDate: new FormControl('', Validators.required),
     expireDate: new FormControl('', Validators.required),
@@ -53,7 +53,7 @@ export class AddSurveyComponent {
     this.addSurveyObj.FirstName              = this.surveyForm.get('fname')!.value;
     this.addSurveyObj.LastName              = this.surveyForm.get('lname')!.value;
     this.addSurveyObj.Title              = this.surveyForm.get('title')!.value;
-    this.addSurveyObj.surveyType         = this.surveyForm.get('type')!.value;
+    this.addSurveyObj.surveyType         = this.surveyForm.get('surveytype')!.value;
     this.addSurveyObj.CreatedDate        = this.surveyForm.get('createdDate')!.value;
     this.addSurveyObj.ExpiryDate         = this.surveyForm.get('expireDate')!.value;
     

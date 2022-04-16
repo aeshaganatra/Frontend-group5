@@ -16,8 +16,8 @@
         <input type="text" class="form-control" [(ngModel)]="survey!.Title" formControlName="title" id="title">
       </div>
       <div class="col-8">
-        <label for="title" class="form-label">Survey Type</label>
-        <input type="text" class="form-control" formControlName="type" id="type">
+        <label for="surveytype" class="form-label">Survey Type</label>
+        <input type="text" class="form-control" [(ngModel)]="survey!.surveyType" formControlName="surveytype" id="surveytype">
       </div>
 <!--      <div class="col-8">-->
 <!--        <label for="description" class="form-label">Description</label>-->

@@ -18,7 +18,7 @@ export class EditSurveyComponent implements OnInit {
     fname: new FormControl('', [Validators.required]),
     lname: new FormControl('', Validators.required),
     title: new FormControl('', Validators.required),
-    type: new FormControl('', Validators.required),
+    surveytype: new FormControl('', Validators.required),
     description: new FormControl('', Validators.required),
     createdDate: new FormControl('', Validators.required),
     expireDate: new FormControl('', Validators.required),
@@ -61,9 +61,10 @@ export class EditSurveyComponent implements OnInit {
     this.editSurveyObj.FirstName              = this.surveyForm.get('fname')!.value;
     this.editSurveyObj.LastName              = this.surveyForm.get('lname')!.value;
     this.editSurveyObj.Title              = this.surveyForm.get('title')!.value;
+    this.editSurveyObj.surveyType         = this.surveyForm.get('surveytype')!.value;
     this.editSurveyObj.CreatedDate        = this.surveyForm.get('createdDate')!.value;
     this.editSurveyObj.ExpiryDate         = this.surveyForm.get('expireDate')!.value;
-    this.editSurveyObj.surveyType         = this.surveyForm.get('type')!.value;
+    
 
     this.editSurveyObj.Questions = []
     const obj = {
